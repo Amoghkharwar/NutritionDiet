@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Nutrishian Diet | Eat Smart. Build Stronger.</title>
+<meta name="description" content="Track calories, protein, carbs, fat and fiber with a database of Indian foods, and calculate nutrition for any serving size.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400..700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 48 48" width="34" height="34" aria-hidden="true">
+        <path d="M5 28h38a19 19 0 0 1-38 0z" fill="var(--accent)"/>
+        <path d="M24 26C14 26 10 19 10 11c9 0 14 6 14 15z" fill="var(--accent)"/>
+        <path d="M24 26c0-9 5-15 14-15 0 8-4 15-14 15z" fill="var(--accent)" opacity=".6"/>
+      </svg>
+      <b>Nutrishian Diet</b>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="index.html" data-nav-link="index.html">Home</a>
+      <a href="foods.html" data-nav-link="foods.html">Foods</a>
+      <a href="recipes.html" data-nav-link="recipes.html">Recipes</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero container">
+    <h1>Eat Smart. Build Stronger.</h1>
+    <p class="lead">A food database built for Indian meals — calories, protein, carbs, fat and fiber for 40+ everyday ingredients, calculated for exactly the serving size you eat.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="foods.html">Explore the food database →</a>
+    </div>
+  </section>
+
+  <section class="section container" aria-labelledby="teaser-h">
+    <div class="sec-head">
+      <div>
+        <h2 id="teaser-h">From the database</h2>
+        <p>A few everyday foods to start with — every card is generated from the same data the full explorer uses.</p>
+      </div>
+      <a class="text-link" href="foods.html">See all foods →</a>
+    </div>
+    <ul class="food-grid teaser-grid" id="teaserGrid" aria-label="Featured foods"></ul>
+    <p class="disclaimer" style="margin-top:32px">Nutrition values are estimates and may vary based on ingredients, preparation method, brand, and portion size. Costs are estimates for planning only, not live market prices.</p>
+  </section>
+
+  <section class="section container" aria-labelledby="recipe-teaser-h">
+    <div class="sec-head">
+      <div>
+        <h2 id="recipe-teaser-h">From the recipes</h2>
+        <p>Every card's nutrition is calculated live from the ingredient list, not a fixed number.</p>
+      </div>
+      <a class="text-link" href="recipes.html">See all recipes →</a>
+    </div>
+    <ul class="food-grid teaser-grid" id="recipeTeaserGrid" aria-label="Featured recipes"></ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="container">
+    <span><b>Nutrishian Diet</b> — a nutrition companion for Indian food, gym and fitness.</span>
+  </div>
+</footer>
+
+<script src="js/data/foods.js"></script>
+<script src="js/data/recipes.js"></script>
+<script src="js/utils/formatters.js"></script>
+<script src="js/utils/nutrition.js"></script>
+<script src="js/utils/foodValidation.js"></script>
+<script src="js/components/foodCard.js"></script>
+<script src="js/components/recipeCard.js"></script>
+<script>
+  (function () {
+    var picks = ["paneer", "egg", "banana", "moong-dal-cooked"].map(function (id) { return NutriApp.foods[id]; }).filter(Boolean);
+    document.getElementById("teaserGrid").innerHTML = picks.map(function (f) { return NutriApp.components.renderFoodCard(f); }).join("");
+
+    var recipePicks = ["classic-vegetable-poha", "egg-protein-poha", "paneer-moong-chilla", "rava-vegetable-upma"]
+      .map(function (id) { return NutriApp.recipesById[id]; }).filter(Boolean);
+    document.getElementById("recipeTeaserGrid").innerHTML = recipePicks.map(function (r) { return NutriApp.components.renderRecipeCard(r); }).join("");
+  })();
+</script>
+<script src="js/app.js"></script>
+</body>
+</html>

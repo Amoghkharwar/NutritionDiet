@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Food Detail | Nutrishian Diet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400..700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 48 48" width="34" height="34" aria-hidden="true">
+        <path d="M5 28h38a19 19 0 0 1-38 0z" fill="var(--accent)"/>
+        <path d="M24 26C14 26 10 19 10 11c9 0 14 6 14 15z" fill="var(--accent)"/>
+        <path d="M24 26c0-9 5-15 14-15 0 8-4 15-14 15z" fill="var(--accent)" opacity=".6"/>
+      </svg>
+      <b>Nutrishian Diet</b>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="index.html" data-nav-link="index.html">Home</a>
+      <a href="foods.html" data-nav-link="foods.html">Foods</a>
+      <a href="recipes.html" data-nav-link="recipes.html">Recipes</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section container">
+  <a class="back-link" href="foods.html">← Back to Foods</a>
+
+  <div id="notFound" hidden style="margin-top:24px">
+    <h1>Food not found</h1>
+    <p style="color:var(--muted);margin-top:8px">We couldn't find that food in the database. It may have been removed, or the link may be incorrect.</p>
+    <a class="btn btn-primary" style="margin-top:20px" href="foods.html">Browse all foods</a>
+  </div>
+
+  <div id="detailContent" hidden style="margin-top:24px">
+    <div class="detail-grid">
+      <div class="thumb ph detail-photo" aria-hidden="true"><span id="dThumbLetter"></span></div>
+
+      <div>
+        <div class="detail-head">
+          <h1 id="dName"></h1>
+          <span class="pill" id="dDiet"></span>
+        </div>
+        <p class="detail-meta" id="dCategory"></p>
+
+        <div class="detail-card" style="margin-top:20px">
+          <h2 style="font-size:1.05rem">Serving size</h2>
+          <div class="stepper" style="margin-top:14px">
+            <button type="button" class="step-btn" id="stepDown" aria-label="Decrease quantity">−</button>
+            <div class="qbox">
+              <input type="number" id="qty" inputmode="decimal" min="0" max="2000" step="1" value="100">
+              <span>g</span>
+            </div>
+            <button type="button" class="step-btn" id="stepUp" aria-label="Increase quantity">+</button>
+          </div>
+          <input type="range" id="qtyRange" min="10" max="500" step="5" value="100" aria-label="Quantity in grams">
+          <p class="unit-note" id="unitNote"></p>
+          <div class="chip-group" id="presets" style="margin-top:10px"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-card" style="margin-top:24px">
+      <p class="detail-meta" aria-live="polite">Nutrition for this serving</p>
+      <div class="tiles" style="margin-top:12px">
+        <div class="tile main">
+          <div class="tl">Calories</div>
+          <b><span id="nCal">0</span></b>
+        </div>
+        <div class="tile">
+          <div class="tl">Protein</div>
+          <b id="nPro">0g</b>
+        </div>
+        <div class="tile">
+          <div class="tl">Carbohydrates</div>
+          <b id="nCarb">0g</b>
+        </div>
+        <div class="tile">
+          <div class="tl">Fat</div>
+          <b id="nFat">0g</b>
+        </div>
+        <div class="tile">
+          <div class="tl">Fiber</div>
+          <b id="nFib">0g</b>
+        </div>
+      </div>
+
+      <div id="microBox" hidden style="margin-top:6px">
+        <p class="detail-meta">Micronutrients</p>
+        <ul class="micro-list"></ul>
+      </div>
+
+      <div class="cost-line">
+        <b id="dCost">₹0</b>
+        <small>estimated cost for this serving</small>
+      </div>
+    </div>
+
+    <p class="disclaimer" style="margin-top:20px">Nutrition values are estimates and may vary based on ingredients, preparation method, brand, and portion size. Costs are estimates for planning only, not live market prices.</p>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="container">
+    <span><b>Nutrishian Diet</b> — a nutrition companion for Indian food, gym and fitness.</span>
+  </div>
+</footer>
+
+<script src="js/data/foods.js"></script>
+<script src="js/data/recipes.js"></script>
+<script src="js/utils/formatters.js"></script>
+<script src="js/utils/nutrition.js"></script>
+<script src="js/utils/foodValidation.js"></script>
+<script src="js/pages/foodDetail.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
