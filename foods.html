@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <title>Food Explorer | Nutrishian Diet</title>
-<meta name="description" content="Search and filter Indian foods by category, diet type, protein, calories and budget — with per-100g nutrition for every item.">
+<meta name="description" content="Tap the ingredients you have at home and get veg or non-veg recipe ideas you can cook with them.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400..700&display=swap">
@@ -35,58 +35,43 @@
   <div class="sec-head">
     <div>
       <h1>Food Explorer</h1>
-      <p>Search and filter 40+ everyday Indian foods, each with per-100g calories, protein, carbs, fat and fiber.</p>
+      <p>Find recipes you can cook from what's already at home.</p>
     </div>
   </div>
 
-  <div class="explorer">
-    <aside class="filters" aria-label="Filters">
-      <div class="search-row">
-        <label class="visually-hidden" for="foodSearch">Search foods</label>
-        <input type="search" id="foodSearch" placeholder="Search foods…" autocomplete="off">
+  <section aria-labelledby="kitchenTitle">
+    <div class="kitchen">
+      <div class="kitchen-head">
+        <div>
+          <h2 id="kitchenTitle">What's in your kitchen?</h2>
+          <p>Tap the ingredients you have at home and we'll suggest recipes you can cook. Oil, spices, lemon, coriander and green chilli are assumed.</p>
+        </div>
+        <button type="button" class="clear-btn" id="kitchenClear" hidden>Clear selection</button>
       </div>
-      <div>
-        <h3 id="categoryLabel">Category</h3>
-        <div class="chip-group" id="categoryChips" role="group" aria-labelledby="categoryLabel"></div>
+      <div class="kitchen-diet">
+        <h3 id="kitchenDietLabel">Show</h3>
+        <div class="chip-group" id="kitchenDiet" role="group" aria-labelledby="kitchenDietLabel"></div>
+        <p>Veg means no meat, fish or eggs.</p>
       </div>
-      <div>
-        <h3 id="dietLabel">Diet</h3>
-        <div class="chip-group" id="dietChips" role="group" aria-labelledby="dietLabel"></div>
-      </div>
-      <div>
-        <h3 id="nutriLabel">Nutrition</h3>
-        <div class="chip-group" id="nutriChips" role="group" aria-labelledby="nutriLabel"></div>
-      </div>
-      <div>
-        <h3 id="budgetLabel">Budget (est. per 100g)</h3>
-        <div class="chip-group" id="budgetChips" role="group" aria-labelledby="budgetLabel"></div>
-      </div>
-      <button type="button" class="clear-btn" id="clearFilters">Clear all filters</button>
-    </aside>
-
-    <div>
-      <div class="results-bar">
-        <span class="result-count" id="resultCount" aria-live="polite"></span>
-        <label>
-          <span class="visually-hidden">Sort by</span>
-          <select id="sortSelect">
-            <option value="name">Name (A–Z)</option>
-            <option value="protein">Highest protein</option>
-            <option value="calories">Lowest calories</option>
-            <option value="cost">Lowest cost</option>
-          </select>
-        </label>
-      </div>
-
-      <ul class="food-grid" id="foodGrid" aria-label="Foods"></ul>
-
-      <div class="empty-state" id="emptyState" hidden>
-        <h3>No foods found</h3>
-        <p>Try a different search term, or clear your filters.</p>
-        <button type="button" class="btn btn-ghost btn-sm" id="emptyClearFilters">Clear all filters</button>
-      </div>
+      <div class="kitchen-picker" id="kitchenPicker"></div>
     </div>
-  </div>
+
+    <p class="kitchen-summary" id="kitchenSummary" aria-live="polite"></p>
+    <div id="kitchenReadyBlock" hidden>
+      <h3 class="kitchen-sub">Ready to cook</h3>
+      <ul class="food-grid" id="kitchenReadyGrid" aria-label="Recipes you can cook now"></ul>
+    </div>
+    <div id="kitchenAlmostBlock" hidden>
+      <h3 class="kitchen-sub">Missing one or two ingredients</h3>
+      <ul class="almost-list" id="kitchenAlmostList" aria-label="Recipes missing one or two ingredients"></ul>
+    </div>
+    <div id="mealDbBlock" hidden>
+      <h3 class="kitchen-sub">More ideas from TheMealDB</h3>
+      <p class="mealdb-intro">Recipes and photos from <a class="text-link" href="https://www.themealdb.com/" target="_blank" rel="noopener">TheMealDB</a>, a free recipe database. They don't come with nutrition numbers; our own recipes do.</p>
+      <p class="mealdb-status" id="mealDbStatus" aria-live="polite"></p>
+      <ul class="food-grid" id="mealDbGrid" aria-label="Recipe ideas from TheMealDB"></ul>
+    </div>
+  </section>
 
   <p class="disclaimer" style="margin-top:32px">Nutrition values are estimates and may vary based on ingredients, preparation method, brand, and portion size. Costs are estimates for planning only, not live market prices.</p>
 </main>
@@ -97,15 +82,18 @@
   </div>
 </footer>
 
-<style>.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
-
 <script src="js/data/foods.js"></script>
 <script src="js/data/recipes.js"></script>
 <script src="js/utils/formatters.js"></script>
 <script src="js/utils/nutrition.js"></script>
 <script src="js/utils/foodValidation.js"></script>
+<script src="js/utils/recipeMatch.js"></script>
+<script src="js/utils/kitchenStore.js"></script>
+<script src="js/services/mealDb.js"></script>
 <script src="js/components/foodCard.js"></script>
-<script src="js/pages/foods.js"></script>
+<script src="js/components/recipeCard.js"></script>
+<script src="js/components/mealDbCard.js"></script>
+<script src="js/pages/kitchen.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

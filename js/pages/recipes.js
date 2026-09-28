@@ -16,7 +16,6 @@
       console.error("[recipes page] NutriApp data did not load — check the script tags on this page.");
       return;
     }
-    var fmt = NutriApp.formatters;
 
     // A recipe whose ingredients can't be fully resolved (see foods.js's
     // note on idli-sambar/dosa-sambar) would only show broken 0-nutrition
@@ -36,50 +35,62 @@
     var sortSelect = document.getElementById("sortSelect");
     var clearBtn = document.getElementById("clearFilters");
     var emptyClearBtn = document.getElementById("emptyClearFilters");
-    var groups = {
-      meal: document.getElementById("mealChips"),
-      diet: document.getElementById("dietChips"),
-      goal: document.getElementById("goalChips")
-    };
+    var filterChips = document.getElementById("filterChips");
 
-    var defaultState = { q: "", meal: "all", diet: "all", goal: "all", sort: "name" };
+    // One filter active at a time, "All Recipes" first. Each test reads the
+    // recipe's own data — goals from tags, diet from dietType/ingredients,
+    // meals from mealType — so a new recipe lands under the right chips
+    // without touching this list. Egg dishes are dietType "non-vegetarian"
+    // (see recipes.js), so they show under Egg and Non-Vegetarian but never
+    // under Vegetarian.
+    function hasTag(tag) { return function (r) { return r.tags.indexOf(tag) !== -1; }; }
+    function forMeal(meal) { return function (r) { return r.mealType.indexOf(meal) !== -1; }; }
+    var FILTERS = [
+      { value: "all", emoji: "", label: "All Recipes", test: function () { return true; } },
+      { value: "fat-loss", emoji: "🔥", label: "Fat Loss", test: hasTag("fat-loss") },
+      { value: "muscle-building", emoji: "💪", label: "Muscle Building", test: hasTag("muscle-building") },
+      { value: "high-protein", emoji: "🥩", label: "High Protein", test: hasTag("high-protein") },
+      { value: "vegetarian", emoji: "🥗", label: "Vegetarian", test: function (r) { return r.dietType === "vegetarian" || r.dietType === "vegan"; } },
+      { value: "egg", emoji: "🥚", label: "Egg", test: function (r) { return r.ingredients.some(function (ing) { return ing.foodId === "egg"; }); } },
+      { value: "non-vegetarian", emoji: "🍗", label: "Non-Vegetarian", test: function (r) { return r.dietType === "non-vegetarian"; } },
+      { value: "high-fiber", emoji: "🌾", label: "High Fiber", test: hasTag("high-fiber") },
+      { value: "breakfast", emoji: "🍽️", label: "Breakfast", test: forMeal("breakfast") },
+      { value: "lunch", emoji: "🥘", label: "Lunch", test: forMeal("lunch") },
+      { value: "dinner", emoji: "🌙", label: "Dinner", test: forMeal("dinner") },
+      { value: "snack", emoji: "🥜", label: "Snacks", test: forMeal("snack") }
+    ];
+    var filtersByValue = {};
+    FILTERS.forEach(function (f) { filtersByValue[f.value] = f; });
+
+    var defaultState = { q: "", filter: "all", sort: "name" };
     var state = Object.assign({}, defaultState);
 
-    function addChip(container, value, label, groupKey) {
+    FILTERS.forEach(function (f) {
       var b = document.createElement("button");
       b.type = "button";
       b.className = "chip";
-      b.textContent = label;
-      b.setAttribute("data-value", value);
-      b.setAttribute("aria-pressed", state[groupKey] === value ? "true" : "false");
+      if (f.emoji) {
+        var icon = document.createElement("span");
+        icon.setAttribute("aria-hidden", "true");
+        icon.textContent = f.emoji + " ";
+        b.appendChild(icon);
+      }
+      b.appendChild(document.createTextNode(f.label));
+      b.setAttribute("data-value", f.value);
+      b.setAttribute("aria-pressed", state.filter === f.value ? "true" : "false");
       b.addEventListener("click", function () {
-        state[groupKey] = value;
-        Array.prototype.forEach.call(container.children, function (c) {
-          c.setAttribute("aria-pressed", c.getAttribute("data-value") === value ? "true" : "false");
+        state.filter = f.value;
+        Array.prototype.forEach.call(filterChips.children, function (c) {
+          c.setAttribute("aria-pressed", c.getAttribute("data-value") === f.value ? "true" : "false");
         });
         render();
       });
-      container.appendChild(b);
-    }
-
-    addChip(groups.meal, "all", "All", "meal");
-    ["breakfast", "lunch", "dinner", "snack"].forEach(function (m) { addChip(groups.meal, m, fmt.capitalize(m), "meal"); });
-
-    addChip(groups.diet, "all", "All", "diet");
-    addChip(groups.diet, "vegetarian", "Vegetarian", "diet");
-    addChip(groups.diet, "non-vegetarian", "Non-vegetarian", "diet");
-
-    // Goal tags derived from the data itself, not hand-typed.
-    var goalTags = Array.from(new Set(allRecipes.reduce(function (acc, r) { return acc.concat(r.tags); }, []))).sort();
-    addChip(groups.goal, "all", "All", "goal");
-    goalTags.forEach(function (t) { addChip(groups.goal, t, fmt.titleCaseSlug(t), "goal"); });
+      filterChips.appendChild(b);
+    });
 
     function matches(r) {
       if (state.q && r.name.toLowerCase().indexOf(state.q) === -1) return false;
-      if (state.meal !== "all" && r.mealType.indexOf(state.meal) === -1) return false;
-      if (state.diet !== "all" && r.dietType !== state.diet) return false;
-      if (state.goal !== "all" && r.tags.indexOf(state.goal) === -1) return false;
-      return true;
+      return filtersByValue[state.filter].test(r);
     }
 
     function nutriOf(r) { return NutriApp.nutrition.calculateRecipeNutrition(r, NutriApp.foods); }
@@ -108,10 +119,8 @@
       state = Object.assign({}, defaultState);
       searchInput.value = "";
       sortSelect.value = "name";
-      Object.keys(groups).forEach(function (key) {
-        Array.prototype.forEach.call(groups[key].children, function (c, i) {
-          c.setAttribute("aria-pressed", i === 0 ? "true" : "false");
-        });
+      Array.prototype.forEach.call(filterChips.children, function (c, i) {
+        c.setAttribute("aria-pressed", i === 0 ? "true" : "false");
       });
       render();
     }

@@ -145,7 +145,7 @@ h1, h2, h3, h4 {
 .fc-link:hover { border-color: var(--accent); transform: translateY(-2px); }
 .thumb.ph { aspect-ratio: 4/3; display: grid; place-items: center; background: linear-gradient(135deg, var(--accent-soft), var(--surface-2)); }
 .thumb.ph span { font: 800 2.2rem/1 "Bricolage Grotesque", sans-serif; color: var(--on-soft); opacity: .55; }
-img.thumb { aspect-ratio: 4/3; width: 100%; height: 100%; object-fit: cover; display: block; }
+img.thumb { aspect-ratio: 4/3; width: 100%; height: auto; flex: none; object-fit: cover; display: block; background: var(--surface-2); }
 .rc-meta { color: var(--muted); font-size: .8rem; margin-top: -4px; }
 .rc-tags { color: var(--muted); font-size: .78rem; }
 .fc-body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
@@ -161,6 +161,32 @@ img.thumb { aspect-ratio: 4/3; width: 100%; height: 100%; object-fit: cover; dis
 .fc-cost { font-weight: 700; font-size: .88rem; }
 .fc-cost small { font-weight: 500; color: var(--muted); }
 .fc-view { font-size: .82rem; font-weight: 700; color: var(--accent); }
+
+/* kitchen matcher (foods page) */
+.kitchen { background: var(--surface); border: 1px solid var(--line); border-radius: 24px; padding: 22px; box-shadow: var(--shadow); }
+.kitchen-head { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.kitchen-head h2 { font-size: clamp(1.3rem, 3vw, 1.7rem); }
+.kitchen-head p { color: var(--muted); margin-top: 6px; max-width: 44rem; }
+.kitchen-picker { display: grid; gap: 18px 28px; margin-top: 20px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); }
+.kitchen-picker h3 { font-size: .78rem; color: var(--muted); font-weight: 700; margin-bottom: 10px; }
+.kitchen-diet { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 18px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+.kitchen-diet h3 { font-size: .78rem; color: var(--muted); font-weight: 700; }
+.kitchen-diet p { color: var(--muted); font-size: .82rem; }
+.kitchen-summary { margin-top: 22px; font-weight: 600; }
+.kitchen-sub { font-size: 1.1rem; margin: 22px 0 12px; }
+.almost-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+.almost-list a { display: flex; flex-direction: column; gap: 2px; height: 100%; padding: 12px 16px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); text-decoration: none; transition: border-color .15s; }
+.almost-list a:hover { border-color: var(--accent); }
+.almost-list .need { font-size: .88rem; font-weight: 600; color: var(--on-soft); }
+.almost-list small { color: var(--muted); font-size: .8rem; }
+
+/* TheMealDB ideas (foods page) + meal.html */
+.mealdb-intro { color: var(--muted); font-size: .9rem; margin: -4px 0 6px; max-width: 46rem; }
+.mealdb-status { color: var(--muted); font-size: .88rem; margin-bottom: 14px; }
+.mealdb-note p { color: var(--muted); font-size: .92rem; margin: 8px 0 12px; }
+.mealdb-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.ing-list li.have { background: var(--accent-soft); color: var(--on-soft); }
+.have-tag { display: block; font-size: .74rem; font-weight: 700; }
 
 /* empty state */
 .empty-state { text-align: center; padding: 48px 20px; color: var(--muted); background: var(--surface); border: 1px dashed var(--line); border-radius: 24px; }

@@ -50,7 +50,7 @@
     "prepTime": 10,
     "cookTime": 10,
     "difficulty": "Easy",
-    "image": "placeholder",
+    "image": "images/recipes/poha.jpg",
     "ingredients": [
       {
         "foodId": "poha",
@@ -193,7 +193,7 @@
     "prepTime": 10,
     "cookTime": 15,
     "difficulty": "Easy",
-    "image": "placeholder",
+    "image": "images/recipes/besan-chilla.jpg",
     "ingredients": [
       {
         "foodId": "besan",
@@ -255,7 +255,7 @@
     "prepTime": 10,
     "cookTime": 15,
     "difficulty": "Easy",
-    "image": "placeholder",
+    "image": "images/recipes/oats-vegetable-upma.jpg",
     "ingredients": [
       {
         "foodId": "oats-dry",
@@ -524,7 +524,7 @@
     "prepTime": 10,
     "cookTime": 25,
     "difficulty": "Medium",
-    "image": "placeholder",
+    "image": "images/recipes/dal-rice.jpg",
     "ingredients": [
       {
         "foodId": "moong-dal-cooked",
@@ -593,7 +593,7 @@
     "prepTime": 15,
     "cookTime": 30,
     "difficulty": "Medium",
-    "image": "placeholder",
+    "image": "images/recipes/rajma-rice.jpg",
     "ingredients": [
       {
         "foodId": "rajma-cooked",
@@ -634,7 +634,9 @@
     ],
     "tags": [
       "vegetarian",
-      "high-protein"
+      "high-protein",
+      "high-fiber",
+      "muscle-building"
     ]
   },
   {
@@ -650,7 +652,7 @@
     "prepTime": 15,
     "cookTime": 30,
     "difficulty": "Medium",
-    "image": "placeholder",
+    "image": "images/recipes/chole-roti.jpg",
     "ingredients": [
       {
         "foodId": "chana-cooked",
@@ -713,7 +715,7 @@
     "prepTime": 10,
     "cookTime": 20,
     "difficulty": "Easy",
-    "image": "placeholder",
+    "image": "images/recipes/paneer-roti.jpg",
     "ingredients": [
       {
         "foodId": "paneer",
@@ -788,7 +790,7 @@
     "prepTime": 10,
     "cookTime": 20,
     "difficulty": "Medium",
-    "image": "placeholder",
+    "image": "images/recipes/soy-chunk-curry-rice.jpg",
     "ingredients": [
       {
         "foodId": "soy-chunks",
@@ -893,7 +895,8 @@
     ],
     "tags": [
       "non-vegetarian",
-      "high-protein"
+      "high-protein",
+      "muscle-building"
     ]
   },
   {
@@ -962,7 +965,8 @@
     ],
     "tags": [
       "non-vegetarian",
-      "high-protein"
+      "high-protein",
+      "muscle-building"
     ]
   },
   {
@@ -1041,7 +1045,7 @@
     "prepTime": 5,
     "cookTime": 2,
     "difficulty": "Easy",
-    "image": "placeholder",
+    "image": "images/recipes/peanut-butter-toast.jpg",
     "ingredients": [
       {
         "foodId": "bread-whole-wheat",
@@ -1128,7 +1132,8 @@
     "tags": [
       "vegetarian",
       "budget",
-      "low-calorie"
+      "low-calorie",
+      "fat-loss"
     ]
   },
   {
@@ -1144,7 +1149,7 @@
     "prepTime": 5,
     "cookTime": 0,
     "difficulty": "Easy",
-    "image": "placeholder",
+    "image": "images/recipes/curd-fruit-nuts-bowl.jpg",
     "ingredients": [
       {
         "foodId": "greek-yogurt",
@@ -1170,7 +1175,8 @@
     "tags": [
       "vegetarian",
       "high-protein",
-      "quick"
+      "quick",
+      "fat-loss"
     ]
   },
   {
@@ -1838,6 +1844,1003 @@
       "fat-loss",
       "vegetarian",
       "balanced"
+    ]
+  },
+  {
+    "id": "vegetable-dal-khichdi",
+    "name": "Vegetable Dal Khichdi",
+    "category": "Indian",
+    "mealType": [
+      "lunch",
+      "dinner"
+    ],
+    "dietType": "vegetarian",
+    "servings": 1,
+    "prepTime": 10,
+    "cookTime": 25,
+    "difficulty": "Easy",
+    "image": "placeholder",
+    "servingLabel": "1 bowl",
+    "ingredients": [
+      {
+        "foodId": "rice-raw",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "foodId": "moong-dal-raw",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "foodId": "mixed-vegetables",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "foodId": "oil",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "foodId": "spices-mix",
+        "quantity": 3,
+        "unit": "g"
+      }
+    ],
+    "instructions": [
+      "Rinse the rice and moong dal together and soak for 15 minutes.",
+      "Heat the oil or ghee in a pressure cooker and saute the mixed vegetables with the spices for 2 minutes.",
+      "Add the rice, dal and about 3 cups of water, and pressure-cook for 3 to 4 whistles.",
+      "Let the pressure release naturally, stir well and loosen with hot water if needed."
+    ],
+    "tags": [
+      "fat-loss",
+      "vegetarian",
+      "balanced"
+    ]
+  },
+  {
+    "id": "paneer-rice-protein-bowl",
+    "name": "Paneer Rice Protein Bowl",
+    "category": "Indian",
+    "mealType": [
+      "lunch"
+    ],
+    "dietType": "vegetarian",
+    "servings": 1,
+    "prepTime": 10,
+    "cookTime": 15,
+    "difficulty": "Easy",
+    "image": "placeholder",
+    "servingLabel": "1 bowl",
+    "ingredients": [
+      {
+        "foodId": "rice-cooked",
+        "quantity": 180,
+        "unit": "g"
+      },
+      {
+        "foodId": "paneer",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "foodId": "mixed-vegetables",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "foodId": "curd",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "foodId": "oil",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "foodId": "spices-mix",
+        "quantity": 3,
+        "unit": "g"
+      }
+    ],
+    "instructions": [
+      "Cut the paneer into cubes and toss with half the spices.",
+      "Sear the paneer in the oil until golden on all sides, then set aside.",
+      "In the same pan, saute the mixed vegetables with the rest of the spices until just tender.",
+      "Spoon the rice into a bowl, top with the vegetables and paneer, and serve with the curd."
+    ],
+    "tags": [
+      "muscle-building",
+      "high-protein",
+      "vegetarian"
+    ]
+  },
+  {
+    "id": "chole-rice-bowl",
+    "name": "Chole Rice Bowl",
+    "category": "Indian",
+    "mealType": [
+      "lunch"
+    ],
+    "dietType": "vegetarian",
+    "servings": 1,
+    "prepTime": 15,
+    "cookTime": 30,
+    "difficulty": "Medium",
+    "image": "images/recipes/chole-rice-bowl.jpg",
+    "servingLabel": "1 bowl",
+    "ingredients": [
+      {
+        "foodId": "chana-cooked",
+        "quantity": 150,
+        "unit": "g"
+      },
+      {
+        "foodId": "rice-cooked",
+        "quantity": 120,
+        "unit": "g"
+      },
+      {
+        "foodId": "onion",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "foodId": "tomato",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "foodId": "oil",
+        "quantity": 6,
+        "unit": "g"
+      },
+      {
+        "foodId": "spices-mix",
+        "quantity": 2,
+        "unit": "g"
+      }
+    ],
+    "instructions": [
+      "Saute onion and tomato in the oil with chole spices until the oil separates.",
+      "Add the boiled chana with a little water and simmer for 10 to 15 minutes until the gravy thickens.",
+      "Mash a few chickpeas against the pan to thicken the gravy further.",
+      "Serve hot over steamed rice."
+    ],
+    "tags": [
+      "vegetarian",
+      "high-fiber",
+      "balanced"
+    ]
+  },
+  {
+    "id": "paneer-bhurji-roti-bowl",
+    "name": "Paneer Bhurji Roti Bowl",
+    "category": "Indian",
+    "mealType": [
+      "lunch",
+      "dinner"
+    ],
+    "dietType": "vegetarian",
+    "servings": 1,
+    "prepTime": 10,
+    "cookTime": 15,
+    "difficulty": "Easy",
+    "image": "placeholder",
+    "servingLabel": "Bhurji + 2 rotis",
+    "ingredients": [
+      {
+        "foodId": "paneer",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "foodId": "roti",
+        "quantity": 2,
+        "unit": "piece",
+        "adjustable": true,
+        "options": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "foodId": "onion",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "foodId": "tomato",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "foodId": "capsicum",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "foodId": "oil",
+        "quantity": 5,
+        "unit": "g"
+      }
+    ],
+    "instructions": [
+      "Crumble the paneer with your hands or a fork.",
+      "Heat the oil and saute onion and capsicum until softened.",
+      "Add tomato and cook until it breaks down, then stir in the paneer and cook for 2 to 3 minutes.",
+      "Serve hot with the rotis."
+    ],
+    "tags": [
+      "muscle-building",
+      "high-protein",
+      "vegetarian"
+    ]
+  },
+  {
+    "id": "chicken-tikka-salad-bowl",
+    "name": "Chicken Tikka Salad Bowl",
+    "category": "Indian",
+    "mealType": [
+      "lunch",
+      "dinner"
+    ],
+    "dietType": "non-vegetarian",
+    "servings": 1,
+    "prepTime": 15,
+    "cookTime": 15,
+    "difficulty": "Medium",
+    "image": "placeholder",
+    "servingLabel": "1 large bowl",
+    "ingredients": [
+      {
+        "foodId": "chicken-breast-cooked",
+        "quantity": 150,
+        "unit": "g",
+        "adjustable": true,
+        "options": [
+          100,
+          150,
+          200
+        ]
+      },
+      {
+        "foodId": "cucumber",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "foodId": "tomato",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "foodId": "onion",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "foodId": "lettuce",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "foodId": "curd",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "foodId": "oil",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "foodId": "lemon",
+        "quantity": 10,
+        "unit": "g"
+      }
+    ],
+    "instructions": [
+      "Marinate the chicken in the curd, lemon juice and tikka spices for at least 30 minutes.",
+      "Grill or pan-sear the chicken in the oil until charred at the edges and cooked through.",
+      "Chop the cucumber, tomato, onion and lettuce into a large bowl.",
+      "Slice the chicken tikka over the salad and serve."
+    ],
+    "tags": [
+      "fat-loss",
+      "high-protein",
+      "non-vegetarian",
+      "low-carb"
+    ]
+  },
+  {
+    "id": "egg-rice-protein-bowl",
+    "name": "Egg Rice Protein Bowl",
+    "category": "Indian",
+    "mealType": [
+      "lunch",
+      "dinner"
+    ],
+    "dietType": "non-vegetarian",
+    "servings": 1,
+    "prepTime": 10,
+    "cookTime": 15,
+    "difficulty": "Easy",
+    "image": "placeholder",
+    "servingLabel": "1 bowl + 3 eggs",
+    "ingredients": [
+      {
+        "foodId": "rice-cooked",
+        "quantity": 180,
+        "unit": "g"
+      },
+      {
+        "foodId": "egg",
+        "quantity": 3,
+        "unit": "piece",
+        "adjustable": true,
+        "options": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "foodId": "mixed-vegetables",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "foodId": "oil",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "foodId": "spices-mix",
+        "quantity": 3,
+        "unit": "g"
+      }
+    ],
+    "instructions": [
+      "Saute the mixed vegetables in the oil with the spices until just tender.",
+      "Push the vegetables aside, crack in the eggs and scramble until just set.",
+      "Add the cooked rice and toss everything together over high heat for 2 minutes.",
+      "Serve hot."
+    ],
+    "tags": [
+      "muscle-building",
+      "high-protein",
+      "egg"
+    ]
+  },
+  {
+    "id": "paneer-tikka-bowl",
+    "name": "Paneer Tikka Bowl",
+    "category": "Indian",
+    "mealType": [
+      "snack"
+    ],
+    "dietType": "vegetarian",
+    "servings": 1,
+    "prepTime": 20,
+    "cookTime": 10,
+    "difficulty": "Easy",
+    "image": "placeholder",
+    "servingLabel": "1 bowl",
+    "ingredients": [
+      {
+        "foodId": "paneer",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "foodId": "greek-yogurt",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "foodId": "capsicum",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "foodId": "onion",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "foodId": "tomato",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "foodId": "oil",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "foodId": "spices-mix",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "foodId": "lemon",
+        "quantity": 5,
+        "unit": "g"
+      }
+    ],
+    "instructions": [
+      "Whisk the yogurt with the spices and lemon juice into a thick marinade.",
+      "Toss the paneer cubes, capsicum, onion and tomato in the marinade and rest for 15 minutes.",
+      "Grill or pan-roast in the oil until the paneer is charred at the edges.",
+      "Serve hot in a bowl."
+    ],
+    "tags": [
+      "muscle-building",
+      "high-protein",
+      "vegetarian"
+    ]
+  },
+  {
+    "id": "roasted-chana-peanut-bowl",
+    "name": "Roasted Chana Peanut Bowl",
+    "category": "Indian",
+    "mealType": [
+      "snack"
+    ],
+    "dietType": "vegetarian",
+    "servings": 1,
+    "prepTime": 10,
+    "cookTime": 0,
+    "difficulty": "Easy",
+    "image": "placeholder",
+    "servingLabel": "1 bowl",
+    "ingredients": [
+      {
+        "foodId": "roasted-chana",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "foodId": "peanuts",
+        "quantity": 15,
+        "unit": "g"
+      },
+      {
+        "foodId": "onion",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "foodId": "tomato",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "foodId": "cucumber",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "foodId": "lemon",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "foodId": "coriander-leaves",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "foodId": "spices-mix",
+        "quantity": 1,
+        "unit": "g"
+      }
+    ],
+    "instructions": [
+      "Finely chop the onion, tomato, cucumber and coriander.",
+      "Toss the roasted chana and peanuts with the chopped vegetables in a bowl.",
+      "Season with the spices and lemon juice, mix well and serve straight away so it stays crunchy."
+    ],
+    "tags": [
+      "fat-loss",
+      "vegetarian",
+      "high-fiber"
+    ]
+  },
+  {
+    "id": "banana-peanut-butter-oats",
+    "name": "Banana Peanut Butter Oats",
+    "category": "Indian",
+    "mealType": [
+      "breakfast",
+      "snack"
+    ],
+    "dietType": "vegetarian",
+    "servings": 1,
+    "prepTime": 5,
+    "cookTime": 5,
+    "difficulty": "Easy",
+    "image": "images/recipes/banana-peanut-butter-oats.jpg",
+    "servingLabel": "1 bowl",
+    "ingredients": [
+      {
+        "foodId": "oats-dry",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "foodId": "banana",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "foodId": "peanut-butter",
+        "quantity": 25,
+        "unit": "g"
+      },
+      {
+        "foodId": "almonds",
+        "quantity": 5,
+        "unit": "g"
+      }
+    ],
+    "instructions": [
+      "Simmer the oats in about 1 cup of water for 3 to 4 minutes, stirring, until creamy.",
+      "Mash half the banana into the oats and slice the rest on top.",
+      "Swirl in the peanut butter and scatter the chopped almonds over the bowl."
+    ],
+    "tags": [
+      "muscle-building",
+      "high-protein",
+      "energy"
+    ]
+  },
+  {
+    "id": "paneer-vegetable-wrap",
+    "name": "Paneer Vegetable Wrap",
+    "category": "Indian",
+    "mealType": [
+      "snack",
+      "lunch",
+      "dinner"
+    ],
+    "dietType": "vegetarian",
+    "servings": 1,
+    "prepTime": 10,
+    "cookTime": 10,
+    "difficulty": "Easy",
+    "image": "images/recipes/paneer-vegetable-wrap.jpg",
+    "servingLabel": "2 wraps",
+    "ingredients": [
+      {
+        "foodId": "roti",
+        "quantity": 2,
+        "unit": "piece",
+        "adjustable": true,
+        "options": [
+          2,
+          3
+        ]
+      },
+      {
+        "foodId": "paneer",
+        "quantity": 70,
+        "unit": "g"
+      },
+      {
+        "foodId": "greek-yogurt",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "foodId": "capsicum",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "foodId": "onion",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "foodId": "cucumber",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "foodId": "lettuce",
+        "quantity": 20,
+        "unit": "g"
+      },
+      {
+        "foodId": "spices-mix",
+        "quantity": 1,
+        "unit": "g"
+      }
+    ],
+    "instructions": [
+      "Toss the paneer cubes with the spices and pan-roast on a hot non-stick tawa until golden.",
+      "Warm the rotis on the tawa.",
+      "Spread the yogurt over each roti and layer with lettuce, capsicum, onion, cucumber and the paneer.",
+      "Roll up tightly and serve."
+    ],
+    "tags": [
+      "muscle-building",
+      "high-protein",
+      "vegetarian"
+    ]
+  },
+  {
+    "id": "high-protein-egg-paneer-bowl",
+    "name": "High-Protein Egg & Paneer Bowl",
+    "category": "Indian",
+    "mealType": [
+      "breakfast",
+      "lunch",
+      "dinner"
+    ],
+    "dietType": "non-vegetarian",
+    "servings": 1,
+    "prepTime": 10,
+    "cookTime": 15,
+    "difficulty": "Easy",
+    "image": "images/recipes/high-protein-egg-paneer-bowl.jpg",
+    "servingLabel": "1 bowl + 1 toast",
+    "ingredients": [
+      {
+        "foodId": "egg",
+        "quantity": 3,
+        "unit": "piece",
+        "adjustable": true,
+        "options": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "foodId": "paneer",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "foodId": "onion",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "foodId": "tomato",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "foodId": "capsicum",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "foodId": "green-peas",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "foodId": "oil",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "foodId": "bread-whole-wheat",
+        "quantity": 1,
+        "unit": "slice"
+      }
+    ],
+    "instructions": [
+      "Saute onion, capsicum, tomato and peas in the oil until softened.",
+      "Add the crumbled paneer and cook for 2 minutes.",
+      "Crack in the eggs and scramble everything together until the eggs are just set.",
+      "Serve in a bowl with a slice of whole wheat toast."
+    ],
+    "tags": [
+      "muscle-building",
+      "high-protein",
+      "egg"
+    ]
+  },
+  {
+    "id": "fat-loss-vegetable-soup-bowl",
+    "name": "Fat-Loss Vegetable Soup Bowl",
+    "category": "Indian",
+    "mealType": [
+      "dinner"
+    ],
+    "dietType": "vegetarian",
+    "servings": 1,
+    "prepTime": 10,
+    "cookTime": 20,
+    "difficulty": "Easy",
+    "image": "placeholder",
+    "servingLabel": "1 large bowl",
+    "ingredients": [
+      {
+        "foodId": "carrot",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "foodId": "tomato",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "foodId": "cabbage",
+        "quantity": 60,
+        "unit": "g"
+      },
+      {
+        "foodId": "french-beans",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "foodId": "green-peas",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "foodId": "onion",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "foodId": "oil",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "foodId": "spices-mix",
+        "quantity": 3,
+        "unit": "g"
+      }
+    ],
+    "instructions": [
+      "Chop all the vegetables into small, even pieces.",
+      "Heat the oil and saute the onion for 2 minutes, then add the carrot, beans, cabbage and peas.",
+      "Add the tomato, spices and about 2 cups of water, and simmer for 12 to 15 minutes until the vegetables are soft.",
+      "Blend part of the soup for a thicker texture if you like, and serve hot."
+    ],
+    "tags": [
+      "fat-loss",
+      "vegetarian",
+      "low-calorie",
+      "high-fiber"
+    ]
+  },
+  {
+    "id": "high-protein-moong-dal-bowl",
+    "name": "High-Protein Moong Dal Bowl",
+    "category": "Indian",
+    "mealType": [
+      "lunch",
+      "dinner"
+    ],
+    "dietType": "vegetarian",
+    "servings": 1,
+    "prepTime": 10,
+    "cookTime": 20,
+    "difficulty": "Easy",
+    "image": "placeholder",
+    "servingLabel": "1 bowl + yogurt",
+    "ingredients": [
+      {
+        "foodId": "moong-dal-raw",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "foodId": "onion",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "foodId": "tomato",
+        "quantity": 40,
+        "unit": "g"
+      },
+      {
+        "foodId": "oil",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "foodId": "spices-mix",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "foodId": "coriander-leaves",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "foodId": "greek-yogurt",
+        "quantity": 50,
+        "unit": "g"
+      }
+    ],
+    "instructions": [
+      "Rinse the moong dal and pressure-cook with turmeric and 2 cups of water until soft.",
+      "Heat the oil and saute onion and tomato with the spices until soft.",
+      "Pour the tempering into the dal and simmer for 2 to 3 minutes, then finish with coriander.",
+      "Serve with the yogurt on the side."
+    ],
+    "tags": [
+      "muscle-building",
+      "high-protein",
+      "vegetarian"
+    ]
+  },
+  {
+    "id": "fat-loss-paneer-salad",
+    "name": "Fat-Loss Paneer Salad",
+    "category": "Indian",
+    "mealType": [
+      "lunch",
+      "dinner"
+    ],
+    "dietType": "vegetarian",
+    "servings": 1,
+    "prepTime": 10,
+    "cookTime": 5,
+    "difficulty": "Easy",
+    "image": "placeholder",
+    "servingLabel": "1 large bowl",
+    "ingredients": [
+      {
+        "foodId": "paneer",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "foodId": "cucumber",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "foodId": "tomato",
+        "quantity": 80,
+        "unit": "g"
+      },
+      {
+        "foodId": "lettuce",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "foodId": "onion",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "foodId": "curd",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "foodId": "lemon",
+        "quantity": 10,
+        "unit": "g"
+      }
+    ],
+    "instructions": [
+      "Cube the paneer and lightly sear it on a hot non-stick tawa.",
+      "Chop the cucumber, tomato, lettuce and onion into a large bowl.",
+      "Whisk the curd with the lemon juice and a pinch of salt and pepper for the dressing.",
+      "Toss the vegetables and paneer with the dressing and serve."
+    ],
+    "tags": [
+      "fat-loss",
+      "high-protein",
+      "vegetarian",
+      "low-carb"
+    ]
+  },
+  {
+    "id": "muscle-building-breakfast-combo",
+    "name": "Muscle-Building Breakfast Combo",
+    "category": "Indian",
+    "mealType": [
+      "breakfast"
+    ],
+    "dietType": "non-vegetarian",
+    "servings": 1,
+    "prepTime": 10,
+    "cookTime": 15,
+    "difficulty": "Easy",
+    "image": "placeholder",
+    "servingLabel": "Protein poha + 2 eggs + curd + half a banana",
+    "ingredients": [
+      {
+        "foodId": "poha",
+        "quantity": 50,
+        "unit": "g"
+      },
+      {
+        "foodId": "soy-chunks",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "foodId": "peanuts",
+        "quantity": 10,
+        "unit": "g"
+      },
+      {
+        "foodId": "green-peas",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "foodId": "onion",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "foodId": "tomato",
+        "quantity": 30,
+        "unit": "g"
+      },
+      {
+        "foodId": "oil",
+        "quantity": 4,
+        "unit": "g"
+      },
+      {
+        "foodId": "spices-mix",
+        "quantity": 2,
+        "unit": "g"
+      },
+      {
+        "foodId": "lemon",
+        "quantity": 5,
+        "unit": "g"
+      },
+      {
+        "foodId": "egg",
+        "quantity": 2,
+        "unit": "piece",
+        "adjustable": true,
+        "options": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "foodId": "curd",
+        "quantity": 100,
+        "unit": "g"
+      },
+      {
+        "foodId": "banana",
+        "quantity": 60,
+        "unit": "g"
+      }
+    ],
+    "instructions": [
+      "Soak the soy chunks in hot water for 5 minutes and squeeze dry. Rinse the poha and set aside.",
+      "Saute onion, tomato, peas, peanuts and soy chunks in the oil with the spices, then fold in the poha and finish with lemon juice.",
+      "Boil or scramble the eggs.",
+      "Serve the poha with the eggs, a bowl of curd and half a banana."
+    ],
+    "tags": [
+      "muscle-building",
+      "high-protein",
+      "egg"
     ]
   }
 ];

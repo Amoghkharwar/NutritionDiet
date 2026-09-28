@@ -37,6 +37,10 @@
  * soaking roughly doubles the weight through water absorption, before the
  * dal is ground into chilla batter.
  *
+ * lettuce, carrot, cabbage, french-beans and roasted-chana were added for
+ * the lunch/dinner/snack recipe batch (salad bowls, vegetable soup, chana
+ * snack bowl).
+ *
  * Nutrition values are estimates and may vary based on ingredients, preparation method, brand, and portion size.
  * Costs are estimates for planning only, not live market prices.
  */
@@ -980,6 +984,111 @@
     ],
     "defaultUnit": "g",
     "servingWeight": 100,
+    "dietType": "vegan"
+  },
+  "lettuce": {
+    "id": "lettuce",
+    "name": "Lettuce",
+    "category": "vegetables",
+    "nutritionPer100g": {
+      "calories": 17,
+      "protein": 1.2,
+      "carbohydrates": 3.3,
+      "fat": 0.3,
+      "fiber": 2.1,
+      "iron": 1.0,
+      "calcium": 33
+    },
+    "estimatedCostPer100g": 15,
+    "units": [
+      "g"
+    ],
+    "defaultUnit": "g",
+    "servingWeight": 50,
+    "dietType": "vegan"
+  },
+  "carrot": {
+    "id": "carrot",
+    "name": "Carrot",
+    "category": "vegetables",
+    "nutritionPer100g": {
+      "calories": 41,
+      "protein": 0.9,
+      "carbohydrates": 9.6,
+      "fat": 0.2,
+      "fiber": 2.8,
+      "iron": 0.3,
+      "calcium": 33
+    },
+    "estimatedCostPer100g": 5,
+    "units": [
+      "g"
+    ],
+    "defaultUnit": "g",
+    "servingWeight": 50,
+    "dietType": "vegan"
+  },
+  "cabbage": {
+    "id": "cabbage",
+    "name": "Cabbage",
+    "category": "vegetables",
+    "nutritionPer100g": {
+      "calories": 25,
+      "protein": 1.3,
+      "carbohydrates": 5.8,
+      "fat": 0.1,
+      "fiber": 2.5,
+      "iron": 0.5,
+      "calcium": 40
+    },
+    "estimatedCostPer100g": 3,
+    "units": [
+      "g"
+    ],
+    "defaultUnit": "g",
+    "servingWeight": 60,
+    "dietType": "vegan"
+  },
+  "french-beans": {
+    "id": "french-beans",
+    "name": "French beans",
+    "category": "vegetables",
+    "nutritionPer100g": {
+      "calories": 31,
+      "protein": 1.8,
+      "carbohydrates": 7.0,
+      "fat": 0.2,
+      "fiber": 2.7,
+      "iron": 1.0,
+      "calcium": 37
+    },
+    "estimatedCostPer100g": 8,
+    "units": [
+      "g"
+    ],
+    "defaultUnit": "g",
+    "servingWeight": 40,
+    "dietType": "vegan"
+  },
+  "roasted-chana": {
+    "id": "roasted-chana",
+    "name": "Roasted chana (bhuna chana)",
+    "category": "pulses",
+    "nutritionPer100g": {
+      "calories": 370,
+      "protein": 22.0,
+      "carbohydrates": 58.0,
+      "fat": 5.2,
+      "fiber": 12.0,
+      "iron": null,
+      "calcium": null
+    },
+    "estimatedCostPer100g": 14,
+    "units": [
+      "g"
+    ],
+    "defaultUnit": "g",
+    "servingWeight": 30,
     "dietType": "vegan"
   }
 };
